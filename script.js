@@ -44,3 +44,63 @@ item.classList.add("active");
 })
 
 })
+
+document.getElementById("secretBtn").onclick=()=>{
+
+document.getElementById("secretMessage").style.display="block";
+
+}
+
+const text =
+"Whenever life gets heavy, you don't have to carry it alone.";
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("typingText").innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,50);
+
+}
+
+}
+
+typeWriter();
+
+const buttons =
+document.querySelectorAll(".memory-btn");
+
+buttons.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+let content =
+btn.nextElementSibling;
+
+if(content.style.display==="block"){
+
+content.style.display="none";
+
+}else{
+
+content.style.display="block";
+
+}
+
+})
+
+})
+
+document.getElementById("vaultBtn").onclick=()=>{
+
+document.getElementById("vaultMessage")
+.style.display="block";
+
+}
+
+
